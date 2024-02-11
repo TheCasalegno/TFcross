@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chrono - TFcross</title>
+</head>
+<body>
+    <style>
+  
+        #timer {
+          font-size: 100px;
+          font-family: "Roboto", sans-serif;
+          font-family: "Ubuntu", sans-serif;
+        }
+        p {
+          font-family: "Roboto", sans-serif;
+          font-family: "Ubuntu", sans-serif;
+        }
+      </style>
+  
+      <div style="color: white" id="timer">00:00.0</div>
+
+    <script>
+        const socket = new WebSocket(process.env.WS);
+  
+        socket.addEventListener("open", function (event) {
+          console.log("Client VIEWER connesso a server INDEX");
+        });
+  
+        socket.addEventListener("message", (event) => {
+          let jsonData = JSON.parse(event.data);
+
+          if (jsonData.command == "chrono") {
+            startCronometro();
+          } else {
+            return;
+          }
+          function startCronometro() {
+            // Inizializza variabili per tenere traccia del tempo
+            let startTime = new Date().getTime();
+            let intervalId;
+  
+            // Funzione per aggiornare il cronometro
+            function updateCronometro() {
+              let currentTime = new Date().getTime();
+              let elapsedTime = currentTime - startTime;
+  
+              let milliseconds = Math.floor((elapsedTime / 100) % 10);
+              let seconds = Math.floor((elapsedTime / 1000) % 60);
+              let minutes = Math.floor((elapsedTime / 60000) % 60);
+  
+              // Formatta il tempo come "HH:MM:SS.S"
+              let formattedTime = `${minutes
+                .toString()
+                .padStart(2, "0")}:${seconds
+                .toString()
+                .padStart(2, "0")}.${milliseconds}`;
+  
+              // Aggiorna il display del cronometro
+              document.getElementById("timer").textContent = formattedTime;
+            }
+  
+            // Avvia il cronometro e aggiorna ogni 100 millisecondi
+            intervalId = setInterval(updateCronometro, 100);
+  
+            // Disabilita il pulsante "Start" dopo l'avv
+          }
+        });
+      </script>
+</body>
+</html>

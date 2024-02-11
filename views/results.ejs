@@ -1,0 +1,459 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Results - TFcross</title>
+  </head>
+  <body>
+    <p class="title" id="gara"></p>
+    <p class="entry1" id="1"></p>
+    <p class="club1" id="c1"></p>
+    <p class="res1" id="r1"></p>
+    <p class="pos1" id="p1"></p>
+    <p class="entry2" id="2"></p>
+    <p class="club2" id="c2"></p>
+    <p class="res2" id="r2"></p>
+    <p class="pos2" id="p2"></p>
+    <p class="entry3" id="3"></p>
+    <p class="club3" id="c3"></p>
+    <p class="res3" id="r3"></p>
+    <p class="pos3" id="p3"></p>
+    <p class="entry4" id="4"></p>
+    <p class="club4" id="c4"></p>
+    <p class="res4" id="r4"></p>
+    <p class="pos4" id="p4"></p>
+    <p class="entry5" id="5"></p>
+    <p class="club5" id="c5"></p>
+    <p class="res5" id="r5"></p>
+    <p class="pos5" id="p5"></p>
+    <p class="entry6" id="6"></p>
+    <p class="club6" id="c6"></p>
+    <p class="res6" id="r6"></p>
+    <p class="pos6" id="p6"></p>
+    <p class="entry7" id="7"></p>
+    <p class="club7" id="c7"></p>
+    <p class="res7" id="r7"></p>
+    <p class="pos7" id="p7"></p>
+    <p class="entry8" id="8"></p>
+    <p class="club8" id="c8"></p>
+    <p class="res8" id="r8"></p>
+    <p class="pos8" id="p8"></p>
+    <p class="entry9" id="9"></p>
+    <p class="club9" id="c9"></p>
+    <p class="res9" id="r9"></p>
+    <p class="pos9" id="p9"></p>
+
+    <style>
+      .title {
+        position: absolute;
+        font-family: "Roboto", sans-serif;
+        font-family: "Ubuntu", sans-serif;
+        font-size: 25px;
+      }
+      .entry1 {
+        color: white;
+        font-weight: bold;
+        position: absolute;
+        font-family: "Roboto", sans-serif;
+        font-family: "Ubuntu", sans-serif;
+        font-size: 15px;
+        padding-top: 50px;
+        padding-left: 30px;
+      }
+      .entry2 {
+        color: white;
+        font-weight: bold;
+        position: absolute;
+        font-family: "Roboto", sans-serif;
+        font-family: "Ubuntu", sans-serif;
+        font-size: 15px;
+        padding-top: 80px;
+        padding-left: 30px;
+      }
+      .entry3 {
+        color: white;
+        font-weight: bold;
+        position: absolute;
+        font-family: "Roboto", sans-serif;
+        font-family: "Ubuntu", sans-serif;
+        font-size: 15px;
+        padding-top: 110px;
+        padding-left: 30px;
+      }
+      .entry4 {
+        color: white;
+        font-weight: bold;
+        position: absolute;
+        font-family: "Roboto", sans-serif;
+        font-family: "Ubuntu", sans-serif;
+        font-size: 15px;
+        padding-top: 140px;
+        padding-left: 30px;
+      }
+      .entry5 {
+        color: white;
+        font-weight: bold;
+        position: absolute;
+        font-family: "Roboto", sans-serif;
+        font-family: "Ubuntu", sans-serif;
+        font-size: 15px;
+        padding-top: 170px;
+        padding-left: 30px;
+      }
+      .entry6 {
+        color: white;
+        font-weight: bold;
+        position: absolute;
+        font-family: "Roboto", sans-serif;
+        font-family: "Ubuntu", sans-serif;
+        font-size: 15px;
+        padding-top: 200px;
+        padding-left: 30px;
+      }
+      .entry7 {
+        color: white;
+        font-weight: bold;
+        position: absolute;
+        font-family: "Roboto", sans-serif;
+        font-family: "Ubuntu", sans-serif;
+        font-size: 15px;
+        padding-top: 230px;
+        padding-left: 30px;
+      }
+      .entry8 {
+        color: white;
+        font-weight: bold;
+        position: absolute;
+        font-family: "Roboto", sans-serif;
+        font-family: "Ubuntu", sans-serif;
+        font-size: 15px;
+        padding-top: 260px;
+        padding-left: 30px;
+      }
+      .entry9 {
+        color: white;
+        font-weight: bold;
+        position: absolute;
+        font-family: "Roboto", sans-serif;
+        font-family: "Ubuntu", sans-serif;
+        font-size: 15px;
+        padding-top: 290px;
+        padding-left: 30px;
+      }
+
+
+
+
+      .club1 {
+        color: white;
+        position: absolute;
+        font-family: "Roboto", sans-serif;
+        font-family: "Ubuntu", sans-serif;
+        font-size: 15px;
+        padding-top: 50px;
+        padding-left: 300px;
+      }
+      .club2 {
+        color: white;
+        position: absolute;
+        font-family: "Roboto", sans-serif;
+        font-family: "Ubuntu", sans-serif;
+        font-size: 15px;
+        padding-top: 80px;
+        padding-left: 300px;
+      }
+      .club3 {
+        color: white;
+        position: absolute;
+        font-family: "Roboto", sans-serif;
+        font-family: "Ubuntu", sans-serif;
+        font-size: 15px;
+        padding-top: 110px;
+        padding-left: 300px;
+      }
+      .club4 {
+        color: white;
+        position: absolute;
+        font-family: "Roboto", sans-serif;
+        font-family: "Ubuntu", sans-serif;
+        font-size: 15px;
+        padding-top: 140px;
+        padding-left: 300px;
+      }
+      .club5 {
+        color: white;
+        position: absolute;
+        font-family: "Roboto", sans-serif;
+        font-family: "Ubuntu", sans-serif;
+        font-size: 15px;
+        padding-top: 170px;
+        padding-left: 300px;
+      }
+      .club6 {
+        color: white;
+        position: absolute;
+        font-family: "Roboto", sans-serif;
+        font-family: "Ubuntu", sans-serif;
+        font-size: 15px;
+        padding-top: 200px;
+        padding-left: 300px;
+      }
+      .club7 {
+        color: white;
+        position: absolute;
+        font-family: "Roboto", sans-serif;
+        font-family: "Ubuntu", sans-serif;
+        font-size: 15px;
+        padding-top: 230px;
+        padding-left: 300px;
+      }
+      .club8 {
+        color: white;
+        position: absolute;
+        font-family: "Roboto", sans-serif;
+        font-family: "Ubuntu", sans-serif;
+        font-size: 15px;
+        padding-top: 260px;
+        padding-left: 300px;
+      }
+      .club9 {
+        color: white;
+        position: absolute;
+        font-family: "Roboto", sans-serif;
+        font-family: "Ubuntu", sans-serif;
+        font-size: 15px;
+        padding-top: 290px;
+        padding-left: 300px;
+      }
+
+
+
+      .res1 {
+        font-weight: bold;
+        color: gray;
+        position: absolute;
+        font-family: "Roboto", sans-serif;
+        font-family: "Ubuntu", sans-serif;
+        font-size: 15px;
+        padding-top: 50px;
+        padding-left: 650px;
+      }
+      .res2 {
+        font-weight: bold;
+        color: gray;
+        position: absolute;
+        font-family: "Roboto", sans-serif;
+        font-family: "Ubuntu", sans-serif;
+        font-size: 15px;
+        padding-top: 80px;
+        padding-left: 650px;
+      }
+      .res3 {
+        font-weight: bold;
+        color: gray;
+        position: absolute;
+        font-family: "Roboto", sans-serif;
+        font-family: "Ubuntu", sans-serif;
+        font-size: 15px;
+        padding-top: 110px;
+        padding-left: 650px;
+      }
+      .res4 {
+        font-weight: bold;
+        color: gray;
+        position: absolute;
+        font-family: "Roboto", sans-serif;
+        font-family: "Ubuntu", sans-serif;
+        font-size: 15px;
+        padding-top: 140px;
+        padding-left: 650px;
+      }
+      .res5 {
+        font-weight: bold;
+        color: gray;
+        position: absolute;
+        font-family: "Roboto", sans-serif;
+        font-family: "Ubuntu", sans-serif;
+        font-size: 15px;
+        padding-top: 170px;
+        padding-left: 650px;
+      }
+      .res6 {
+        font-weight: bold;
+        color: gray;
+        position: absolute;
+        font-family: "Roboto", sans-serif;
+        font-family: "Ubuntu", sans-serif;
+        font-size: 15px;
+        padding-top: 200px;
+        padding-left: 650px;
+      }
+      .res7 {
+        font-weight: bold;
+        color: gray;
+        position: absolute;
+        font-family: "Roboto", sans-serif;
+        font-family: "Ubuntu", sans-serif;
+        font-size: 15px;
+        padding-top: 230px;
+        padding-left: 650px;
+      }
+      .res8 {
+        font-weight: bold;
+        color: gray;
+        position: absolute;
+        font-family: "Roboto", sans-serif;
+        font-family: "Ubuntu", sans-serif;
+        font-size: 15px;
+        padding-top: 260px;
+        padding-left: 650px;
+      }
+      .res9 {
+        font-weight: bold;
+        color: gray;
+        position: absolute;
+        font-family: "Roboto", sans-serif;
+        font-family: "Ubuntu", sans-serif;
+        font-size: 15px;
+        padding-top: 290px;
+        padding-left: 650px;
+      }
+
+
+      .pos1 {
+        color: black;
+        font-weight: bold;
+        position: absolute;
+        font-family: "Roboto", sans-serif;
+        font-family: "Ubuntu", sans-serif;
+        font-size: 15px;
+        padding-top: 50px;
+      }
+      .pos2 {
+        color: black;
+        font-weight: bold;
+        position: absolute;
+        font-family: "Roboto", sans-serif;
+        font-family: "Ubuntu", sans-serif;
+        font-size: 15px;
+        padding-top: 80px;
+      }
+      .pos3 {
+        color: black;
+        font-weight: bold;
+        position: absolute;
+        font-family: "Roboto", sans-serif;
+        font-family: "Ubuntu", sans-serif;
+        font-size: 15px;
+        padding-top: 110px;
+      }
+      .pos4 {
+        color: black;
+        font-weight: bold;
+        position: absolute;
+        font-family: "Roboto", sans-serif;
+        font-family: "Ubuntu", sans-serif;
+        font-size: 15px;
+        padding-top: 140px;
+      }
+      .pos5 {
+        color: black;
+        font-weight: bold;
+        position: absolute;
+        font-family: "Roboto", sans-serif;
+        font-family: "Ubuntu", sans-serif;
+        font-size: 15px;
+        padding-top: 170px;
+      }
+      .pos6 {
+        color: black;
+        font-weight: bold;
+        position: absolute;
+        font-family: "Roboto", sans-serif;
+        font-family: "Ubuntu", sans-serif;
+        font-size: 15px;
+        padding-top: 200px;
+      }
+      .pos7 {
+        color: black;
+        font-weight: bold;
+        position: absolute;
+        font-family: "Roboto", sans-serif;
+        font-family: "Ubuntu", sans-serif;
+        font-size: 15px;
+        padding-top: 230px;
+      }
+      .pos8 {
+        color: black;
+        font-weight: bold;
+        position: absolute;
+        font-family: "Roboto", sans-serif;
+        font-family: "Ubuntu", sans-serif;
+        font-size: 15px;
+        padding-top: 260px;
+      }
+      .pos9 {
+        color: black;
+        font-weight: bold;
+        position: absolute;
+        font-family: "Roboto", sans-serif;
+        font-family: "Ubuntu", sans-serif;
+        font-size: 15px;
+        padding-top: 290px;
+      }
+    </style>
+    <script>
+      const socket = new WebSocket(process.env.WS);
+
+      socket.addEventListener("message", (event) => {
+        let jsonData = JSON.parse(event.data);
+
+        if (jsonData.message == "results") {
+          document.getElementById("gara").textContent = jsonData.gara;
+          document.getElementById("1").textContent = jsonData.uno.toUpperCase();
+          document.getElementById("2").textContent = jsonData.due.toUpperCase();
+          document.getElementById("3").textContent = jsonData.tre.toUpperCase();
+          document.getElementById("4").textContent = jsonData.qua.toUpperCase();
+          document.getElementById("5").textContent = jsonData.cin.toUpperCase();
+          document.getElementById("6").textContent = jsonData.sei.toUpperCase();
+          document.getElementById("7").textContent = jsonData.set.toUpperCase();
+          document.getElementById("8").textContent = jsonData.ott.toUpperCase();
+          document.getElementById("9").textContent = jsonData.nov.toUpperCase();
+
+          document.getElementById("c1").textContent = jsonData.unoClub;
+          document.getElementById("c2").textContent = jsonData.dueClub;
+          document.getElementById("c3").textContent = jsonData.treClub;
+          document.getElementById("c4").textContent = jsonData.quaClub;
+          document.getElementById("c5").textContent = jsonData.cinClub;
+          document.getElementById("c6").textContent = jsonData.seiClub;
+          document.getElementById("c7").textContent = jsonData.setClub;
+          document.getElementById("c8").textContent = jsonData.ottClub;
+          document.getElementById("c9").textContent = jsonData.novClub;
+
+          document.getElementById("r1").textContent = jsonData.unoRes;
+          document.getElementById("r2").textContent = jsonData.dueRes;
+          document.getElementById("r3").textContent = jsonData.treRes;
+          document.getElementById("r4").textContent = jsonData.quaRes;
+          document.getElementById("r5").textContent = jsonData.cinRes;
+          document.getElementById("r6").textContent = jsonData.seiRes;
+          document.getElementById("r7").textContent = jsonData.setRes;
+          document.getElementById("r8").textContent = jsonData.ottRes;
+          document.getElementById("r9").textContent = jsonData.novRes;
+
+          document.getElementById("p1").textContent = jsonData.unoPos;
+          document.getElementById("p2").textContent = jsonData.duePos;
+          document.getElementById("p3").textContent = jsonData.trePos;
+          document.getElementById("p4").textContent = jsonData.quaPos;
+          document.getElementById("p5").textContent = jsonData.cinPos;
+          document.getElementById("p6").textContent = jsonData.seiPos;
+          document.getElementById("p7").textContent = jsonData.setPos;
+          document.getElementById("p8").textContent = jsonData.ottPos;
+          document.getElementById("p9").textContent = jsonData.novPos;
+        } else {
+          return;
+        }
+      });
+    </script>
+  </body>
+</html>
