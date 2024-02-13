@@ -1,9 +1,10 @@
 const express = require("express");
 const app = express();
 const path = require("path");
+const config = require("./config.json")
 
 const WebSocket = require("ws");
-const server = new WebSocket.Server({ port: 8880 });
+const server = new WebSocket.Server({ port: config.wsPort });
 
 
 //express static files settings
@@ -40,11 +41,13 @@ const dashboard = require("./routes/dashboard");
 const chrono = require("./routes/chrono");
 const results = require("./routes/results");
 const startlist = require("./routes/startlist");
+const settings = require("./routes/settings");
 
+app.use("/settings", settings);
 app.use("/dashboard", dashboard);
 app.use("/chrono", chrono);
 app.use("/results", results);
 app.use("/startlist", startlist);
 
 //listen on port 2087
-app.listen(2087);
+app.listen(config.mainPort);

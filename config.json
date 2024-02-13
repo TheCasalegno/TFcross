@@ -1,0 +1,12 @@
+{
+    "url":"https://irunning.it/api/ris.php?gara_id=41951",
+    "wsDomain":"ws://localhost",
+    "wsPort":"8880",
+    "mainPort":"2087",
+    "timeout":"1000",
+
+    "DEFAULTwsDomain":"ws://localhost",
+    "DEFAULTwsPort":"8880",
+    "DEFAULTmainPort":"2087",
+    "DEFAULTtimeout":"10000"
+}
