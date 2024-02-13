@@ -1,16 +1,21 @@
 const express = require("express");
 const router = express.Router();
-require("dotenv").config();
 const fetch = require("node-fetch");
+const config = require("../config.json")
 
-const url = process.env.URL;
+let url = config.url;
 const settings = { method: "Get" };
 
 const WebSocket = require("ws");
-const client = new WebSocket(process.env.WS);
+const client = new WebSocket(config.wsDomain + ":" + config.wsPort);
+
+let websocketURL = config.wsDomain + ":" + config.wsPort
 
 router.get("/", (req, res) => {
-  res.render("results", {});
+  res.render("results", {
+    websocketURL,
+    url
+  });
 });
 
 client.on("message", (message) => {

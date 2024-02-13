@@ -1,12 +1,16 @@
 const express = require("express");
 const router = express.Router();
-require("dotenv").config()
+const config = require("../config.json")
 
-const WebSocket = require("ws");
-const client = new WebSocket(process.env.WS)
+let websocketURL = config.wsDomain + ":" + config.wsPort
+
+let url = config.url;
 
 router.get("/", (req, res) => {
-    res.render("dashboard", {});
-});
+    res.render("dashboard", {
+      websocketURL,
+      url
+    });
+  });
 
 module.exports = router;

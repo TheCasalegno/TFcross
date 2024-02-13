@@ -1,16 +1,21 @@
 const express = require("express");
 const router = express.Router();
-require("dotenv").config();
 const fetch = require("node-fetch");
+const config = require("../config.json")
 
-const url = process.env.URL;
+let url = config.url;
 const settings = { method: "Get" };
 
 const WebSocket = require("ws");
-const client = new WebSocket(process.env.WS);
+const client = new WebSocket(config.wsDomain + ":" + config.wsPort);
+
+let websocketURL = config.wsDomain + ":" + config.wsPort
 
 router.get("/", (req, res) => {
-  res.render("startlist", {});
+  res.render("startlist", {
+    websocketURL,
+    url
+  });
 });
 
 client.on("message", (message) => {
@@ -18,6 +23,7 @@ client.on("message", (message) => {
   let jsonData = JSON.parse(message);
 
   if (jsonData.command == "startlist") {
+    
       fetch(url, settings)
         .then((res) => res.json())
         .then((json) => {
@@ -98,7 +104,7 @@ client.on("message", (message) => {
               let jsonSEND = JSON.stringify(jsonDATA);
               client.send(jsonSEND)
   
-            }, i * 10000);
+            }, i * config.timeout);
           }
         });
     }
