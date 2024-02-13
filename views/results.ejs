@@ -404,7 +404,7 @@
       }
     </style>
     <script>
-      const socket = new WebSocket(process.env.WS);
+      const socket = new WebSocket("<%= websocketURL %>");
 
       socket.addEventListener("message", (event) => {
         let jsonData = JSON.parse(event.data);

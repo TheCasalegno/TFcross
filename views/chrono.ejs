@@ -22,7 +22,8 @@
       <div style="color: white" id="timer">00:00.0</div>
 
     <script>
-        const socket = new WebSocket(process.env.WS);
+      const config = require("../config.json")
+        const socket = new WebSocket(config.wsDomain + ":" + config.wsPort);
   
         socket.addEventListener("open", function (event) {
           console.log("Client VIEWER connesso a server INDEX");

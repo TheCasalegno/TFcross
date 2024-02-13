@@ -81,7 +81,7 @@
     </style>
 
     <script>
-      const socket = new WebSocket(process.env.WS);
+      const socket = new WebSocket("<%= websocketURL %>");
       const chronoSTARTbtn = document.getElementById("chronoSTARTbtn");
       const startlistSHOWbtn = document.getElementById("startlistSHOWbtn");
       const resultsSHOWbtn = document.getElementById("resultsSHOWbtn");
